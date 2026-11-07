@@ -3,180 +3,246 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arvin Satrio Kuncoro — Curriculum Vitae</title>
-<meta name="description" content="CV Arvin Satrio Kuncoro: mahasiswa D3 Teknik Komputer Kontrol Politeknik Negeri Madiun, teknisi jaringan dan infrastruktur.">
+<title>Arvin Satrio Kuncoro — Teknisi Jaringan & Mahasiswa Teknik Komputer Kontrol</title>
+<meta name="description" content="Teknisi jaringan fiber optik dengan pengalaman lebih dari 2 tahun, kini menempuh D3 Teknik Komputer Kontrol di Politeknik Negeri Madiun. Unduh CV atau hubungi langsung.">
+<meta property="og:title" content="Arvin Satrio Kuncoro — Curriculum Vitae">
+<meta property="og:description" content="Teknisi jaringan & infrastruktur, mahasiswa D3 Teknik Komputer Kontrol (PLC, SCADA, HMI, mikrokontroler).">
+<meta property="og:type" content="profile">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔌</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f1f4f2; --surface:#ffffff; --ink:#15211e; --muted:#53635f;
-  --line:#cfd8d4; --accent:#00796b; --accent-ink:#ffffff; --signal:#e39a00;
+  --bg:#f3f6f4; --surface:#fff; --ink:#13201d; --muted:#51615c; --line:#d3dcd8;
+  --accent:#00796b; --accent-ink:#fff; --chip:#e3efec;
+  --deep:#06201c; --glow:#3ee6c4; --signal:#ffb703;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#0f1715; --surface:#16211e; --ink:#e8efec; --muted:#9fb0aa;
-        --line:#2a3b36; --accent:#4fd1bd; --accent-ink:#06201b; --signal:#f2b53a;}
+  :root{--bg:#0d1513; --surface:#15201d; --ink:#e8efec; --muted:#9db0aa; --line:#273833;
+        --accent:#4fd1bd; --accent-ink:#06201b; --chip:#1d2d29;}
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font:400 1.0625rem/1.65 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--signal);outline-offset:3px}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+.wrap{max-width:66rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(6,32,28,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(62,230,196,.18)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.5rem}
+nav b{font:700 1.05rem "Bricolage Grotesque",sans-serif;color:#fff}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0}
+nav a{color:#bfe9e0;text-decoration:none;font-size:.95rem;font-weight:500}
+nav a:hover{color:var(--signal)}
+@media(max-width:700px){nav ul{display:none}}
 
 /* Hero */
-header{padding:4.5rem 0 0;overflow:hidden}
-.role{margin:0 0 .75rem;color:var(--accent);font-weight:600}
-h1{margin:0;font:800 clamp(2.6rem,9vw,6rem)/.98 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.03em}
-.lead{max-width:40rem;margin:1.5rem 0 0;color:var(--muted)}
-.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:2rem 0 0}
-.btn{display:inline-block;padding:.75rem 1.25rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--accent-ink)}
-.btn.ghost{color:var(--ink)}
-.btn:hover{border-color:var(--signal)}
-.fiber{display:block;width:100%;height:60px;margin-top:2.5rem}
-.fiber path{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round}
-.fiber .pulse{stroke:var(--signal);stroke-width:3;stroke-dasharray:60 1400;animation:run 5s linear 1 forwards}
-@keyframes run{from{stroke-dashoffset:60}to{stroke-dashoffset:-1400}}
-@media (prefers-reduced-motion:reduce){.fiber .pulse{animation:none;stroke-dasharray:none;opacity:0}}
+.hero{position:relative;background:var(--deep);color:#eafaf6;overflow:hidden;padding:4.5rem 0 5rem}
+.hero svg.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero svg path{fill:none;stroke:rgba(62,230,196,.28);stroke-width:1.5}
+.hero svg .p{stroke:var(--glow);stroke-width:3;stroke-linecap:round;stroke-dasharray:70 1800;filter:drop-shadow(0 0 6px var(--glow));animation:run 7s linear infinite}
+.hero svg .p2{animation-delay:-2.5s;stroke:var(--signal);filter:drop-shadow(0 0 6px var(--signal))}
+.hero svg .p3{animation-delay:-4.8s}
+@keyframes run{from{stroke-dashoffset:70}to{stroke-dashoffset:-1800}}
+.hero .wrap{position:relative}
+.badge{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid rgba(62,230,196,.4);border-radius:99px;color:var(--glow);font-weight:600;font-size:.9rem}
+.badge i{width:.55rem;height:.55rem;border-radius:50%;background:var(--glow);box-shadow:0 0 8px var(--glow)}
+.hero h1{font-weight:800;font-size:clamp(2.8rem,9.5vw,6.2rem);line-height:.97;letter-spacing:-.03em;margin:1.25rem 0 0}
+.hero .role{font:500 clamp(1.15rem,2.6vw,1.5rem)/1.4 "Bricolage Grotesque",sans-serif;color:#bfe9e0;margin:1.25rem 0 0;max-width:36rem}
+.hero .lead{max-width:38rem;margin:1rem 0 0;color:#a8cfc7}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:2px solid var(--glow);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p1{background:var(--glow);color:#032019}
+.btn.p2{background:var(--signal);border-color:var(--signal);color:#241900}
+.btn.p3{color:#eafaf6}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;margin-top:3.5rem;background:rgba(62,230,196,.25);border:1px solid rgba(62,230,196,.25);border-radius:.8rem;overflow:hidden}
+.facts div{background:rgba(6,32,28,.88);padding:1.1rem 1.25rem}
+.facts b{display:block;font:700 1.35rem/1.2 "Bricolage Grotesque",sans-serif;color:#fff}
+.facts span{color:#a8cfc7;font-size:.92rem}
 
 /* Sections */
-main{padding-bottom:2rem}
-section{padding:3.25rem 0;border-top:1px solid var(--line)}
-section:first-of-type{border-top:0}
-.grid{display:grid;grid-template-columns:12rem 1fr;gap:1rem 2.5rem}
-h2{margin:0;font:700 1.5rem/1.2 "Bricolage Grotesque",system-ui,sans-serif}
-h3{margin:0;font:700 1.25rem/1.3 "Bricolage Grotesque",system-ui,sans-serif}
-.meta{margin:.15rem 0 .75rem;color:var(--muted);font-size:.95rem}
-p{margin:0 0 1rem;max-width:42rem}
-ul{margin:0;padding-left:1.15rem;max-width:42rem}
-li{margin:.4rem 0}
-li::marker{color:var(--accent)}
-.entry+.entry{margin-top:2rem}
-dl{margin:0}
-dl div{padding:.9rem 0;border-bottom:1px solid var(--line)}
-dl div:first-child{padding-top:0}
-dt{font-weight:600}
-dd{margin:.15rem 0 0;color:var(--muted)}
-.note{font-size:.875rem;color:var(--muted);margin-top:1rem}
+section{padding:4rem 0}
+.head{margin-bottom:2rem}
+.head h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.02em;line-height:1.15}
+.head p{margin:.5rem 0 0;color:var(--muted);max-width:38rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:.6rem;padding:1.4rem}
+.card:nth-child(2){border-left-color:var(--signal)}
+.card h3{font-size:1.25rem;margin-bottom:.5rem}
+.card p{margin:0;color:var(--muted)}
+
+/* Timeline */
+.tl{position:relative;margin:0;padding:0 0 0 2rem;list-style:none}
+.tl::before{content:"";position:absolute;left:.45rem;top:.4rem;bottom:.4rem;width:3px;background:linear-gradient(var(--accent),var(--signal));border-radius:2px}
+.tl li{position:relative;margin:0 0 2.25rem}
+.tl li::before{content:"";position:absolute;left:-2rem;top:.45rem;width:1rem;height:1rem;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl li.now::before{border-color:var(--signal);background:var(--signal)}
+.when{color:var(--accent);font-weight:600;font-size:.95rem}
+.tl h3{font-size:1.4rem;margin:.1rem 0}
+.where{color:var(--muted);margin:0 0 .75rem}
+.tl ul{margin:0;padding-left:1.15rem;max-width:44rem}
+.tl li li{margin:.35rem 0}
+.tl li li::before{display:none}
+.tl ul li::marker{color:var(--accent)}
+.tl li ul li{position:static}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.25rem}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:.6rem;padding:1.3rem}
+.sk h3{font-size:1.1rem;margin-bottom:.75rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.chips li{background:var(--chip);padding:.25rem .7rem;border-radius:99px;font-size:.9rem;font-weight:500}
+.note{font-size:.85rem;color:var(--muted);margin-top:1.25rem}
 
 /* Contact */
-.contact a{display:block;padding:.35rem 0;text-decoration:none;font-weight:500}
-.contact a:hover{color:var(--accent);text-decoration:underline}
-footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.cta{background:var(--deep);color:#eafaf6;border-radius:1rem;padding:clamp(1.75rem,5vw,3.5rem)}
+.cta h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
+.cta p{color:#a8cfc7;max-width:34rem}
+.cta .list{margin-top:1.5rem;display:grid;gap:.25rem}
+.cta .list a{text-decoration:none;font-weight:500;width:fit-content}
+.cta .list a:hover{color:var(--signal);text-decoration:underline}
+.cta .list span{display:inline-block;min-width:6rem;color:var(--glow);font-size:.9rem;font-weight:600}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;text-align:center}
 
-@media (max-width:720px){
-  header{padding-top:3rem}
-  .grid{grid-template-columns:1fr}
-  section{padding:2.5rem 0}
-}
+@media (max-width:700px){.hero{padding:3rem 0 3.5rem} section{padding:3rem 0}}
+@media (prefers-reduced-motion:reduce){.hero svg .p{animation:none;opacity:0}.btn{transition:none}}
 </style>
 </head>
 <body>
-<header>
+
+<nav aria-label="Navigasi utama">
   <div class="wrap">
-    <p class="role">Teknisi jaringan dan infrastruktur · Mahasiswa Teknik Komputer Kontrol</p>
+    <b>ASK</b>
+    <ul>
+      <li><a href="#kekuatan">Kekuatan</a></li>
+      <li><a href="#perjalanan">Perjalanan</a></li>
+      <li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="bg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-20 470 H300 C350 470 350 380 400 380 H760 C810 380 810 520 860 520 H1220"/>
+    <path d="M-20 520 H180 C230 520 230 440 280 440 H560 C610 440 610 300 660 300 H1220"/>
+    <path d="M-20 420 H420 C470 420 470 560 520 560 H1220"/>
+    <path class="p" d="M-20 470 H300 C350 470 350 380 400 380 H760 C810 380 810 520 860 520 H1220"/>
+    <path class="p p2" d="M-20 520 H180 C230 520 230 440 280 440 H560 C610 440 610 300 660 300 H1220"/>
+    <path class="p p3" d="M-20 420 H420 C470 420 470 560 520 560 H1220"/>
+  </svg>
+  <div class="wrap">
+    <span class="badge"><i></i> Mahasiswa aktif D3 Teknik Komputer Kontrol</span>
     <h1>Arvin Satrio Kuncoro</h1>
-    <p class="lead">Mahasiswa D3 Teknik Komputer Kontrol semester 3 di Politeknik Negeri Madiun, dengan pengalaman lebih dari dua tahun menyambung dan merawat jaringan fiber optik.</p>
+    <p class="role">Teknisi jaringan dan infrastruktur dengan pengalaman lapangan lebih dari dua tahun.</p>
+    <p class="lead">Terbiasa menyambung fiber optik, melacak gangguan, dan membaca manual teknis yang rumit. Kini memperdalam PLC, SCADA, HMI, dan mikrokontroler di Politeknik Negeri Madiun.</p>
     <div class="actions">
-      <a class="btn primary" href="Arvin_Kuncoro.pdf" download>Unduh CV (PDF)</a>
-      <a class="btn ghost" href="#kontak">Hubungi saya</a>
+      <a class="btn p1" href="Arvin_Kuncoro.pdf" download>Unduh CV (PDF)</a>
+      <a class="btn p2" href="https://www.linkedin.com/in/arvin-satrio" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn p3" href="https://www.instagram.com/arvnn.s/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn p3" href="mailto:arvinkuncoro@gmail.com">Kirim email</a>
+    </div>
+    <div class="facts">
+      <div><b>Lebih dari 2 tahun</b><span>teknisi jaringan & infrastruktur</span></div>
+      <div><b>Fiber optik</b><span>splicing dan terminasi presisi</span></div>
+      <div><b>PLC · SCADA · HMI</b><span>sistem kendali dan otomasi</span></div>
+      <div><b>Arduino · STM32</b><span>C/C++ dan embedded system</span></div>
     </div>
   </div>
-  <svg class="fiber" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 40 H260 C300 40 300 14 340 14 H620 C660 14 660 44 700 44 H1200"/>
-    <path class="pulse" d="M0 40 H260 C300 40 300 14 340 14 H620 C660 14 660 44 700 44 H1200"/>
-  </svg>
 </header>
 
-<main class="wrap">
-  <section id="profil" class="grid">
-    <h2>Profil</h2>
-    <div>
-      <p>Program studi yang saya tempuh mencakup elektronika, instrumentasi, mikrokontroler, dan sistem kendali industri, ditambah dasar pemrograman software dan web.</p>
-      <p>Teliti, analitis dalam menyelesaikan masalah teknis, disiplin, bertanggung jawab, dan mampu bekerja mandiri maupun dalam tim. Terbiasa memanfaatkan AI engine untuk menunjang produktivitas dan debugging.</p>
-    </div>
-  </section>
-
-  <section id="pengalaman" class="grid">
-    <h2>Pengalaman kerja</h2>
-    <div class="entry">
-      <h3>Teknisi Jaringan &amp; Infrastruktur</h3>
-      <p class="meta">CV Hexa Intermedia, Magetan · Mei 2023 – Agustus 2025</p>
-      <ul>
-        <li><strong>Troubleshooting dan pemecahan masalah:</strong> melacak dan menyelesaikan gangguan sistem secara cepat dan analitis.</li>
-        <li><strong>Ketelitian teknis:</strong> menyambung (splicing) inti kabel serat optik dan melakukan terminasi dengan presisi tinggi, agar data mengalir tanpa kehilangan sinyal (packet loss).</li>
-        <li><strong>Kerja lapangan:</strong> bekerja di bawah tekanan operasional secara mandiri maupun dalam tim, serta terbiasa membaca manual teknis yang kompleks.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="pendidikan" class="grid">
-    <h2>Pendidikan</h2>
-    <div>
-      <div class="entry">
-        <h3>Politeknik Negeri Madiun</h3>
-        <p class="meta">D3 Teknik Komputer Kontrol (A.Md, 6 semester) · 2025 – sekarang, semester 3</p>
-        <ul>
-          <li>Fokus program studi: komputer kontrol, kontrol industri, elektronika, dan teknologi tepat guna.</li>
-          <li>Capaian pembelajaran: merealisasikan rangkaian elektronika secara rinci, kalibrasi dan pengujian sistem, laporan teknis, serta antarmuka dengan peralatan atau sistem lain.</li>
-          <li>Sistem kendali dan otomasi: Sistem Kendali Proses, PLC, SCADA, dan HMI, dengan memperhatikan keselamatan kerja (K3) dan aspek lingkungan.</li>
-          <li>Dasar teknik: matematika teknik dan fisika terapan untuk instalasi, pengoperasian, pengujian, pemeliharaan, dan troubleshooting instrumentasi sesuai standar SNI.</li>
-          <li>Sudah ditempuh: logika algoritma, struktur data dasar, mikrokontroler (Arduino/STM32) dengan C/C++, embedded system, pemrograman web (HTML, CSS, PHP), dan pemrograman berorientasi objek (Java).</li>
-          <li>Praktik laboratorium: Kontrol Industri, Elektronika dan Digital, Mikrokontroler dan Robotika, Komputer dan Pemrograman, serta Workshop.</li>
-        </ul>
+<main>
+  <section id="kekuatan">
+    <div class="wrap">
+      <div class="head">
+        <h2>Yang bisa saya bawa ke tim Anda</h2>
+        <p>Gabungan pengalaman kerja nyata dan pendidikan teknik yang sedang berjalan.</p>
       </div>
-      <div class="entry">
-        <h3>SMKN 5 Madiun</h3>
-        <p class="meta">Teknik Komputer dan Jaringan (TKJ) · Lulus 2023</p>
-        <ul>
-          <li>Dasar komputasi, perakitan komputer, dan pengelolaan server.</li>
-          <li>Pembangunan dan instalasi infrastruktur jaringan.</li>
-          <li>Protokol jaringan dasar dan arsitektur client-server.</li>
-        </ul>
+      <div class="cards">
+        <div class="card"><h3>Sudah terbukti di lapangan</h3><p>Bekerja mandiri maupun dalam tim di bawah tekanan operasional, melacak dan menyelesaikan gangguan sistem secara cepat dan analitis.</p></div>
+        <div class="card"><h3>Teliti sampai ke detail</h3><p>Menyambung inti kabel serat optik dan terminasi dengan presisi tinggi, agar data mengalir tanpa kehilangan sinyal (packet loss).</p></div>
+        <div class="card"><h3>Terus belajar</h3><p>Menempuh elektronika, instrumentasi, dan sistem kendali industri, serta memanfaatkan AI engine untuk produktivitas dan debugging.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="keahlian" class="grid">
-    <h2>Keahlian</h2>
-    <div>
-      <dl>
-        <div><dt>Jaringan &amp; infrastruktur</dt><dd>Splicing dan terminasi kabel fiber optik, instalasi jaringan, administrasi server, troubleshooting infrastruktur IT, membaca manual teknis.</dd></div>
-        <div><dt>Mikrokontroler &amp; embedded</dt><dd>C/C++, Arduino, STM32, perancangan embedded system, integrasi hardware ke software.</dd></div>
-        <div><dt>Elektronika &amp; instrumentasi*</dt><dd>Realisasi rangkaian elektronika, kalibrasi dan pengujian sistem, pengukuran dengan alat ukur elektronik, dasar instrumentasi.</dd></div>
-        <div><dt>Sistem kendali &amp; otomasi*</dt><dd>Sistem kendali proses, PLC, SCADA, HMI, antarmuka dengan peralatan atau sistem lain, penerapan K3 dan aspek lingkungan.</dd></div>
-        <div><dt>Pemrograman &amp; software</dt><dd>Algoritma dan struktur data, Java (OOP), HTML, CSS, PHP, dasar JavaScript dan TypeScript, konsep dasar React Native dan Expo.</dd></div>
-        <div><dt>Tools</dt><dd>Git, GitHub / GitLab; AI engine (ChatGPT, Claude, Copilot) untuk optimasi kode, sintaks, dan pemecahan masalah.</dd></div>
-        <div><dt>Soft skills</dt><dd>Analitis, teliti, disiplin, bertanggung jawab, kerja mandiri dan tim, penulisan laporan teknis.</dd></div>
-      </dl>
+  <section id="perjalanan" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="head"><h2>Perjalanan</h2></div>
+      <ol class="tl">
+        <li class="now">
+          <span class="when">2025 – sekarang</span>
+          <h3>D3 Teknik Komputer Kontrol</h3>
+          <p class="where">Politeknik Negeri Madiun · semester 3 dari 6 · gelar A.Md</p>
+          <ul>
+            <li>Sistem kendali dan otomasi: Sistem Kendali Proses, PLC, SCADA, HMI, dengan memperhatikan K3 dan aspek lingkungan.</li>
+            <li>Instalasi, pengujian, pemeliharaan, dan troubleshooting instrumentasi sesuai standar SNI.</li>
+            <li>Kalibrasi dan pengujian sistem, pembuatan laporan teknis, serta antarmuka dengan peralatan atau sistem lain.</li>
+            <li>Pemrograman: logika algoritma, struktur data, mikrokontroler (Arduino/STM32) dengan C/C++, web (HTML, CSS, PHP), dan Java (OOP).</li>
+            <li>Praktik laboratorium: Kontrol Industri, Elektronika dan Digital, Mikrokontroler dan Robotika, Komputer dan Pemrograman, Workshop.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="when">Mei 2023 – Agustus 2025</span>
+          <h3>Teknisi Jaringan &amp; Infrastruktur</h3>
+          <p class="where">CV Hexa Intermedia, Magetan</p>
+          <ul>
+            <li><strong>Troubleshooting:</strong> melacak dan menyelesaikan gangguan sistem secara cepat dan analitis.</li>
+            <li><strong>Ketelitian teknis:</strong> splicing inti kabel serat optik dan terminasi dengan presisi tinggi.</li>
+            <li><strong>Kerja lapangan:</strong> mandiri maupun tim di bawah tekanan operasional, terbiasa membaca manual teknis kompleks.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="when">Lulus 2023</span>
+          <h3>SMKN 5 Madiun</h3>
+          <p class="where">Teknik Komputer dan Jaringan (TKJ)</p>
+          <ul>
+            <li>Dasar komputasi, perakitan komputer, dan pengelolaan server.</li>
+            <li>Pembangunan dan instalasi infrastruktur jaringan, protokol jaringan dasar, arsitektur client-server.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="keahlian" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="head"><h2>Keahlian</h2></div>
+      <div class="skills">
+        <div class="sk"><h3>Jaringan &amp; infrastruktur</h3><ul class="chips"><li>Splicing fiber optik</li><li>Terminasi kabel</li><li>Instalasi jaringan</li><li>Administrasi server</li><li>Troubleshooting IT</li><li>Manual teknis</li></ul></div>
+        <div class="sk"><h3>Sistem kendali &amp; otomasi*</h3><ul class="chips"><li>Kendali proses</li><li>PLC</li><li>SCADA</li><li>HMI</li><li>K3</li></ul></div>
+        <div class="sk"><h3>Elektronika &amp; instrumentasi*</h3><ul class="chips"><li>Realisasi rangkaian</li><li>Kalibrasi</li><li>Pengujian sistem</li><li>Alat ukur elektronik</li></ul></div>
+        <div class="sk"><h3>Mikrokontroler &amp; embedded</h3><ul class="chips"><li>C/C++</li><li>Arduino</li><li>STM32</li><li>Embedded system</li><li>Hardware ke software</li></ul></div>
+        <div class="sk"><h3>Pemrograman &amp; software</h3><ul class="chips"><li>Java (OOP)</li><li>HTML</li><li>CSS</li><li>PHP</li><li>JavaScript dasar</li><li>TypeScript dasar</li><li>React Native dasar</li><li>Expo</li></ul></div>
+        <div class="sk"><h3>Tools &amp; soft skills</h3><ul class="chips"><li>Git</li><li>GitHub / GitLab</li><li>ChatGPT</li><li>Claude</li><li>Copilot</li><li>Analitis</li><li>Teliti</li><li>Disiplin</li><li>Bertanggung jawab</li><li>Kerja tim</li><li>Laporan teknis</li></ul></div>
+      </div>
       <p class="note">*Mengacu pada capaian pembelajaran Program Studi D3 Teknik Komputer Kontrol, Politeknik Negeri Madiun.</p>
     </div>
   </section>
 
-  <section id="alamat" class="grid">
-    <h2>Alamat</h2>
-    <div>
-      <p>Kabupaten Madiun, Jawa Timur</p>
-    </div>
-  </section>
-
-  <section id="kontak" class="grid contact">
-    <h2>Mari Terhubung</h2>
-    <div>
-      <a href="mailto:arvinkuncoro@gmail.com">arvinkuncoro@gmail.com</a>
-      <a href="https://vin562.github.io">vin562.github.io</a>
-      <a href="https://www.linkedin.com/in/arvin-satrio" target="_blank" rel="noopener noreferrer">LinkedIn: arvin-satrio</a>
-      <a href="https://www.instagram.com/arvnn.s" target="_blank" rel="noopener noreferrer">Instagram: @arvnn.s</a>
-      <a href="Arvin_Kuncoro.pdf" download>Unduh CV lengkap (PDF)</a>
+  <section id="kontak" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Mari berbicara</h2>
+        <p>Silakan unduh CV lengkap atau hubungi saya langsung. Saya berdomisili di Kabupaten Madiun, Jawa Timur.</p>
+        <div class="actions">
+          <a class="btn p1" href="Arvin_Kuncoro.pdf" download>Unduh CV (PDF)</a>
+        </div>
+        <div class="list">
+          <a href="mailto:arvinkuncoro@gmail.com"><span>Email</span>arvinkuncoro@gmail.com</a>
+          <a href="https://www.linkedin.com/in/arvin-satrio" target="_blank" rel="noopener"><span>LinkedIn</span>linkedin.com/in/arvin-satrio</a>
+          <a href="https://www.instagram.com/arvnn.s/" target="_blank" rel="noopener"><span>Instagram</span>@arvnn.s</a>
+          <a href="https://github.com/vin562" target="_blank" rel="noopener"><span>GitHub</span>github.com/vin562</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">© 2026 Arvin Satrio Kuncoro</div>
-</footer>
+<footer>© 2026 Arvin Satrio Kuncoro</footer>
 </body>
 </html>
